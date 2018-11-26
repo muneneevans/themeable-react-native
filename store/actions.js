@@ -1,4 +1,5 @@
 export const changeBaseTheme = BaseTheme => {
+  //dispatch an action to change light or dark theme
   return dispatch => {
     dispatch({
       type: "CHANGE_BASE_THEME",
@@ -8,6 +9,7 @@ export const changeBaseTheme = BaseTheme => {
 };
 
 export const changeColorTheme = ColorTheme => {
+  //dispatch an action to change accent color theme theme
   return dispatch => {
     dispatch({
       type: "CHANGE_COLOR_THEME",

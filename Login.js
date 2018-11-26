@@ -130,6 +130,7 @@ class Login extends React.Component {
             <Segment>
               <ItemPicker
                 onValueChange={(itemValue, itemIndex) =>
+                  //make redux action to change the light or dark theme
                   itemValue !== 0 && this.props.changeBaseTheme(itemValue)
                 }
                 selectedValue={null}
@@ -143,11 +144,13 @@ class Login extends React.Component {
               <ItemPicker
                 style={{}}
                 onValueChange={(itemValue, itemIndex) =>
+                  //make redux action to change the accent color theme
                   this.props.changeColorTheme(itemValue)
                 }
               >
                 <Picker.Item label="Please select an color theme" value="0" />
                 {Object.keys(colorOptions).map((option, i) => (
+                  //create options for each color option in our theme.js file
                   <Picker.Item
                     key={i}
                     label={option}
