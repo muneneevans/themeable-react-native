@@ -1,7 +1,10 @@
 import * as React from "react";
-
+import { Picker } from "react-native";
+import { lightTheme, darkTheme, colorOptions } from "./store/theme";
 import { connect } from "react-redux";
 import styled, { ThemeProvider } from "styled-components";
+import { bindActionCreators } from "redux";
+import { changeBaseTheme, changeColorTheme } from "./store/actions";
 
 const Container = styled.View`
   flex: 1;
@@ -60,15 +63,8 @@ const Description = styled.Text`
   padding-top: 20;
 `;
 
-const TextInputContainer = styled.View`
-  border-bottom-width: 1;
-  border-bottom-color: #e0e0e0;
-`;
-
-const TextInput = styled.TextInput`
+const ItemPicker = styled.Picker`
   color: ${props => props.theme.PRIMARY_TEXT_COLOR};
-  font-size: ${props => props.theme.FONT_SIZE_MEDIUM};
-  font-family: ${props => props.theme.PRIMARY_FONT_FAMILY};
   padding-top: 20;
 `;
 
@@ -132,12 +128,33 @@ class Login extends React.Component {
             </Segment>
 
             <Segment>
-              <TextInputContainer>
-                <TextInput>Username</TextInput>
-              </TextInputContainer>
-              <TextInputContainer>
-                <TextInput>Password</TextInput>
-              </TextInputContainer>
+              <ItemPicker
+                onValueChange={(itemValue, itemIndex) =>
+                  itemValue !== 0 && this.props.changeBaseTheme(itemValue)
+                }
+                selectedValue={null}
+              >
+                <Picker.Item label="Please select an base theme" value="0" />
+                <Picker.Item label="Dark" value={darkTheme} />
+                <Picker.Item label="Light" value={lightTheme} />
+              </ItemPicker>
+            </Segment>
+            <Segment>
+              <ItemPicker
+                style={{}}
+                onValueChange={(itemValue, itemIndex) =>
+                  this.props.changeColorTheme(itemValue)
+                }
+              >
+                <Picker.Item label="Please select an color theme" value="0" />
+                {Object.keys(colorOptions).map((option, i) => (
+                  <Picker.Item
+                    key={i}
+                    label={option}
+                    value={colorOptions[option]}
+                  />
+                ))}
+              </ItemPicker>
             </Segment>
           </Body>
 
@@ -156,4 +173,12 @@ const mapStateToProps = state => ({
   theme: state.themeReducer.theme
 });
 
-export default connect(mapStateToProps)(Login);
+const mapDispatchToProps = dispatch => ({
+  changeBaseTheme: bindActionCreators(changeBaseTheme, dispatch),
+  changeColorTheme: bindActionCreators(changeColorTheme, dispatch)
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Login);
