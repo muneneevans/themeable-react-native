@@ -10,11 +10,11 @@ export const base = {
   FONT_WEIGHT_MEDIUM: "500",
   FONT_WEIGHT_BOLD: "700",
 
-  PRIMARY_FONT_FAMILY: "AvertaDemo-Regular",
-  PRIMARY_FONT_FAMILY_BOLD: "AvertaDemo-ExtraBoldItalic",
+  PRIMARY_FONT_FAMILY: "Montserrat-Regular",
+  PRIMARY_FONT_FAMILY_BOLD: "Montserrat-Bold",
 
-  SECONDARY_FONT_FAMILY: "Product-Sans-Regular",
-  SECONDARY_FONT_FAMILY_ITALIC: "Product-Sans-Italic"
+  SECONDARY_FONT_FAMILY: "Montserrat-Regular",
+  SECONDARY_FONT_FAMILY_ITALIC: "Montserrat-Bold"
 };
 
 export const darkTheme = {
@@ -51,10 +51,10 @@ export const colorOptions = {
     PRIMARY_COLOR: "#FF9800",
     PRIMARY_COLOR_BOLD: "#EF6C00",
     PRIMARY_FOREGROUND_COLOR: "#ffffff",
-    name:"orange"
+    name: "orange"
   },
   red: {
-    name:"red",
+    name: "red",
     PRIMARY_COLOR_FAINT: "#FFEBEE",
     PRIMARY_COLOR_LIGHT: "#E57373",
     PRIMARY_COLOR: "#F44336",
@@ -62,7 +62,7 @@ export const colorOptions = {
     PRIMARY_FOREGROUND_COLOR: "#ffffff"
   },
   blue: {
-    name:"blue",
+    name: "blue",
     PRIMARY_COLOR_FAINT: "#E3F2FD",
     PRIMARY_COLOR_LIGHT: "#64B5F6",
     PRIMARY_COLOR: "#2196F3",
@@ -70,7 +70,7 @@ export const colorOptions = {
     PRIMARY_FOREGROUND_COLOR: "#ffffff"
   },
   cyan: {
-    name:"cyan",
+    name: "cyan",
     PRIMARY_COLOR_FAINT: "#E0F7FA",
     PRIMARY_COLOR_LIGHT: "#4DD0E1",
     PRIMARY_COLOR: "#00BCD4",
@@ -78,7 +78,7 @@ export const colorOptions = {
     PRIMARY_FOREGROUND_COLOR: "#ffffff"
   },
   teal: {
-    name:"teal",
+    name: "teal",
     PRIMARY_COLOR_FAINT: "#E0F2F1",
     PRIMARY_COLOR_LIGHT: "#4DB6AC",
     PRIMARY_COLOR: "#009688",
@@ -86,7 +86,7 @@ export const colorOptions = {
     PRIMARY_FOREGROUND_COLOR: "#ffffff"
   },
   gray: {
-    name:"gray",
+    name: "gray",
     PRIMARY_COLOR_FAINT: "#FAFAFA",
     PRIMARY_COLOR_LIGHT: "#E0E0E0",
     PRIMARY_COLOR: "#9E9E9E",
@@ -94,7 +94,7 @@ export const colorOptions = {
     PRIMARY_FOREGROUND_COLOR: "#ffffff"
   },
   purlple: {
-    name:"purple",
+    name: "purple",
     PRIMARY_COLOR_FAINT: "#EDE7F6",
     PRIMARY_COLOR_LIGHT: "#9575CD",
     PRIMARY_COLOR: "#673AB7",
@@ -102,7 +102,7 @@ export const colorOptions = {
     PRIMARY_FOREGROUND_COLOR: "#ffffff"
   },
   green: {
-    name:"green",
+    name: "green",
     PRIMARY_COLOR_FAINT: "#E8F5E9",
     PRIMARY_COLOR_LIGHT: "#81C784",
     PRIMARY_COLOR: "#4CAF50",
